@@ -15,7 +15,11 @@ const ViewCoinLockRecords = () => {
       </div>
       <div className={styles.tableData}>
         {arr.map((record: number, i: number) => (
-          <ViewCoinLockRecordRow i={i} key={i}></ViewCoinLockRecordRow>
+          <ViewCoinLockRecordRow
+            i={i}
+            key={i}
+            rowLength={arr.length}
+          ></ViewCoinLockRecordRow>
         ))}
       </div>
     </div>
