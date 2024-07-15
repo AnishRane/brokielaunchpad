@@ -4,13 +4,14 @@ import ViewCoinTop from './ViewCoinTop';
 import ViewCoinMiddle from './ViewCoinMiddle';
 import ViewCoinBottom from './ViewCoinBottom';
 
-
 const ViewCoinMain = () => {
   return (
     <div className={styles.mainContainer}>
+      <ViewCoinBottom></ViewCoinBottom>
       <ViewCoinTop></ViewCoinTop>
       <ViewCoinMiddle></ViewCoinMiddle>
-      <ViewCoinBottom></ViewCoinBottom>
+      {/* this ViewCoinBottom component was moved to the top of the page. */}
+      {/* <ViewCoinBottom></ViewCoinBottom> */}
     </div>
   );
 };
