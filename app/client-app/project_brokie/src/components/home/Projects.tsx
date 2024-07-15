@@ -4,8 +4,13 @@ import styles from '@/styles/projects.module.css';
 import Image from 'next/image';
 import fire_icon from '@/assets/icons/fire_icon.png';
 import ProjectCard from './ProjectCard';
+import { TokenDetails } from '@/types/tProjectData';
 
-const Projects = () => {
+type TProjectsComp = {
+  projects: TokenDetails[]
+}
+
+const Projects = ({ projects }: TProjectsComp) => {
   const [op, setOp] = useState(true);
   //   op = ongoing projects
   return (
@@ -26,8 +31,8 @@ const Projects = () => {
         </div>
       </div>
       <div className={styles.cardsWrapper}>
-        {[...Array(5)].map((_:any, i: number) => (
-          <ProjectCard key={i} i={i}></ProjectCard>
+        {projects?.map((p: TokenDetails, i: number) => (
+          <ProjectCard key={p?.uuid} i={i} project={p}></ProjectCard>
         ))}
       </div>
     </div>

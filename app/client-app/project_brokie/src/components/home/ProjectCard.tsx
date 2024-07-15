@@ -8,13 +8,15 @@ import invest from '@/assets/icons/invest.png';
 import view from '@/assets/icons/view.png';
 import { FaChartArea } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import { TokenDetails } from '@/types/tProjectData';
 
 type TProjectCard = {
   pathname?: string;
   i: number;
+  project: TokenDetails;
 };
 
-const ProjectCard = ({ pathname, i }: TProjectCard) => {
+const ProjectCard = ({ pathname, i, project }: TProjectCard) => {
   const router = useRouter();
   const progress = 51;
 
