@@ -91,7 +91,7 @@ const ProjectCard = ({ pathname, i, project }: TProjectCard) => {
               Invest
             </button>
           )}
-          <button onClick={() => router.push('/view_coin/0')}>
+          <button onClick={() => router.push(`/view_coin/${project.uuid}`)}>
             <Image
               className={styles.view}
               src={view}
