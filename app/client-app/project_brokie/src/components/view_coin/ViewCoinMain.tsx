@@ -8,10 +8,10 @@ import ViewCoinLockRecords from './ViewCoinLockRecords';
 const ViewCoinMain = () => {
   return (
     <div className={styles.mainContainer}>
-      <ViewCoinBottom></ViewCoinBottom>
       <ViewCoinTop></ViewCoinTop>
       <ViewCoinMiddle></ViewCoinMiddle>
-      <ViewCoinLockRecords></ViewCoinLockRecords>
+      <ViewCoinBottom></ViewCoinBottom>
+      {/* <ViewCoinLockRecords></ViewCoinLockRecords> */}
       {/* this ViewCoinBottom component was moved to the top of the page. */}
       {/* <ViewCoinBottom></ViewCoinBottom> */}
     </div>

@@ -11,7 +11,7 @@ import { TIndicatorsItem } from '@/types/indicator';
 //   'https://reason-caroline-triple-boutique.trycloudflare.com/v1';
 
 export const baseUrl =
-  'http://localhost:3002/v1';
+  process.env.NEXT_PUBLIC_BASEURL;
 
 export const navItems: TNavItems[] = [
   {

@@ -3,6 +3,7 @@ import Projects from '@/components/home/Projects';
 import TopLeftGradient from '@/components/others/TopLeftGradient';
 import TopRightGradient from '@/components/others/TopRightGradient';
 import Footer from '@/components/shared/Footer';
+import { baseUrl } from '@/services/constant';
 
 export default async function Home() {
   const projectsData = await getProjectsData();
@@ -23,16 +24,17 @@ export default async function Home() {
 }
 
 async function getProjectsData() {
-  const res = await fetch('http://localhost:3002/v1/project/all', {
-    cache: 'no-store',
-  });
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+  try {
+    const res = await fetch(`${baseUrl}/project/all`, {
+      cache: 'no-store',
+    });
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch projects');
+    const data = res.json();
+
+    return data || [];
+  } catch (error) {
+    console.log("error while fetching projects",error);
   }
-
-  return res.json();
 }
