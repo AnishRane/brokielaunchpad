@@ -38,7 +38,7 @@ const ProjectCard = ({ pathname, i, project }: TProjectCard) => {
           <div className={styles.ongoing}>
             <span>Ongoing</span>
           </div>
-          <div className={styles.percentage}>
+          {/* <div className={styles.percentage}>
             <Image
               src={men_group}
               alt="group_men"
@@ -46,26 +46,26 @@ const ProjectCard = ({ pathname, i, project }: TProjectCard) => {
               width={15}
             ></Image>
             <span>5%</span>
-          </div>
+          </div> */}
         </div>
         <div className={styles.infoTextWrapper}>
-          <h2>Candle Coin</h2>
+          <h2>{project.token_name}</h2>
           <h4>1 Candle = 0.0000312 TON</h4>
-          <h3>1000 TON</h3>
+          <h3>{project.target_soft_cap} TON</h3>
           <h5>Soft Cap</h5>
         </div>
         <div className={styles.infoTextSquare}>
           <p className={styles.liquidity}>
             <span>Liquidity:</span>
-            <span>51%</span>
+            <span>{project.liquidity_percentage}%</span>
           </p>
           <p className={styles.offered}>
             <span>Offered:</span>
-            <span>770 000 000 BUZZ</span>
+            <span>{project.fair_launch_allocation} BUZZ</span>
           </p>
         </div>
         <div className={styles.progress}>
-          <h4>Progress (51%)</h4>
+          <h4>Progress ({project.total_cap_raised}%)</h4>
           <div onMouseMove={handleHover} className={styles.progressBarNormal}>
             <span
               style={{ left: `calc(${hoverWidth}% - 10px)` }}

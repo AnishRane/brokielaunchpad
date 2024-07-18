@@ -13,7 +13,8 @@ export enum ProjectStatus {
     token_description: string;
     total_supply: string;
     target_soft_cap: string;
-    limit_per_user: number;
+    limit_per_user: number | string;
+    total_cap_raised: string
     liquidity_percentage: string;
     fair_launch_allocation: string;
     dex_listing: string;

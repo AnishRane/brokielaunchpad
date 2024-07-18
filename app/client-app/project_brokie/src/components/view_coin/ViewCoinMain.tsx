@@ -4,11 +4,17 @@ import ViewCoinTop from './ViewCoinTop';
 import ViewCoinMiddle from './ViewCoinMiddle';
 import ViewCoinBottom from './ViewCoinBottom';
 import ViewCoinLockRecords from './ViewCoinLockRecords';
+import { baseUrl } from '@/services/constant';
+import { TokenDetails } from '@/types/tProjectData';
 
-const ViewCoinMain = () => {
+type TViewCoinMain = {
+  projectData: TokenDetails;
+};
+
+const ViewCoinMain = ({ projectData }: TViewCoinMain) => {
   return (
     <div className={styles.mainContainer}>
-      <ViewCoinTop></ViewCoinTop>
+      <ViewCoinTop projectData={projectData}></ViewCoinTop>
       <ViewCoinMiddle></ViewCoinMiddle>
       <ViewCoinBottom></ViewCoinBottom>
       {/* <ViewCoinLockRecords></ViewCoinLockRecords> */}

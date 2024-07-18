@@ -5,8 +5,13 @@ import Image from 'next/image';
 import telegram from '@/assets/icons/view_coin/telegram.png';
 import dribble from '@/assets/icons/view_coin/dribble.png';
 import x from '@/assets/icons/view_coin/x.png';
+import { TokenDetails } from '@/types/tProjectData';
 
-const ViewCoinTop = () => {
+type TViewCoinTop = {
+  projectData: TokenDetails;
+};
+
+const ViewCoinTop = ({ projectData }: TViewCoinTop) => {
   return (
     <div className={styles.topContainer}>
       <div className={styles.topContainerLeft}>
@@ -14,12 +19,10 @@ const ViewCoinTop = () => {
           <Image alt="card" src={coinImg} height={200} width={190}></Image>
         </div>
         <div className={styles.textWrapper}>
-          <h2>Candle Coin</h2>
-          <h4>Lorem ipsum dolor sit.</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            minus quia modi.
-          </p>
+          <h2>{projectData?.token_name}</h2>
+          <h4>{projectData?.target_soft_cap} TON</h4>
+
+          <p>{projectData?.token_description}</p>
         </div>
       </div>
       <div className={styles.topContainerRight}>
