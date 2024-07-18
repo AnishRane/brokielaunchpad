@@ -15,7 +15,7 @@ const ViewCoinMain = ({ projectData }: TViewCoinMain) => {
   return (
     <div className={styles.mainContainer}>
       <ViewCoinTop projectData={projectData}></ViewCoinTop>
-      <ViewCoinMiddle></ViewCoinMiddle>
+      <ViewCoinMiddle projectData={projectData}></ViewCoinMiddle>
       <ViewCoinBottom></ViewCoinBottom>
       {/* <ViewCoinLockRecords></ViewCoinLockRecords> */}
       {/* this ViewCoinBottom component was moved to the top of the page. */}

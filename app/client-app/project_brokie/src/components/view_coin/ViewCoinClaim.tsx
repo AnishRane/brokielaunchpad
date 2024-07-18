@@ -71,15 +71,17 @@ const ViewCoinClaim = () => {
             <span>1 TON</span>
           </div>
         </div>
-        <button className={styles.claimButton}>
-          <Image
-            src={claimCoin}
-            alt="claim_coin_icon"
-            width={20}
-            height={20}
-          ></Image>
-          Claim Coin
-        </button>
+        <div className={styles.claimButtonWrapper}>
+          <button className={styles.claimButton}>
+            <Image
+              src={claimCoin}
+              alt="claim_coin_icon"
+              width={20}
+              height={20}
+            ></Image>
+            Claim Coin
+          </button>
+        </div>
         <div className={styles.iconButtons}>
           <button>
             <Image src={lock} alt="lock_icon" width={20} height={20}></Image>

@@ -1,6 +1,6 @@
 .middleContainer {
     width: 100%;
-    height: 1000px;
+    height: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -43,6 +43,8 @@
 .listItem {
     width: 100%;
     border-bottom: 1px solid #998989;
+    display: flex;
+    justify-content: space-between;
 
 
 }
@@ -53,10 +55,18 @@
 
 .listItem>span {
     display: inline-block;
-    width: 100%;
     padding: 5px 0 15px 0;
     color: white;
 
+}
+
+.listItem>span:first-of-type {
+    width: 35%;
+}
+
+.listItem>span:last-of-type {
+    text-align: right;
+    color: #5A5A5A;
 }
 
 .middleContainerRight {
@@ -69,13 +79,14 @@
 
 @media (max-width: 1199px) {
 
- .middleContainerLeft{
-    width: 64%;
+    .middleContainerLeft {
+        width: 64%;
 
- }
- .middleContainerRight{
-    width: 34%;
- }
+    }
+
+    .middleContainerRight {
+        width: 34%;
+    }
 
 }
 
@@ -86,11 +97,12 @@
         padding: 25px 0;
     }
 
-    .middleContainerLeft{
+    .middleContainerLeft {
         margin-top: -20px;
 
     }
-    .middleContainerRight{
+
+    .middleContainerRight {
         margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -116,15 +128,29 @@
 }
 
 @media (max-width: 767px) {
-    .middleContainerRight{
+    .middleContainerRight {
         gap: 1rem;
         grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .listItem {
+        flex-direction: column;
+    }
+
+    .listItem>span:first-of-type {
+        width: 100%;
+    }
+    .listItem>span:last-of-type {
+        width: 100%;
     }
 }
+
 @media (max-width: 639px) {
-    .middleContainerRight{
-       display: grid;
-       justify-content: center;
-       grid-template-columns: repeat(1, 100%);
+    .middleContainerRight {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 100%);
     }
 }
+

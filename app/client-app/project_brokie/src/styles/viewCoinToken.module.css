@@ -25,6 +25,7 @@
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 10%;
 
 }
 
@@ -61,6 +62,7 @@
         width: 60%;
         margin-left: 20%;
         margin-right: 20%;
+        margin-top: 15%;
 
     }
 }
@@ -77,6 +79,7 @@
         width: 45%;
         margin-left: 27.5%;
         margin-right: 27.5%;
+        margin-top: 0;
 
     }
 }
